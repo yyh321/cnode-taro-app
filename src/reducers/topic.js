@@ -9,7 +9,8 @@ export default function topicList(prestate = TOPIC_STATE, action) {
     case 'getTopicList':
       return {
         ...prestate,
-        list: action.list
+        list: action.list,
+        page: 1
       }
     case 'appendTopicList':
       return {

@@ -1,3 +1,6 @@
+import {
+  getTopicList
+} from './topicList'
 // 显示抽屉
 
 export function showDrawerAction() {
@@ -22,5 +25,10 @@ export function changeCataAction(cata) {
       type: 'changeCata',
       currentCata: cata
     })
+    dispatch(getTopicList({
+      tab: cata.key,
+      page: 1,
+      limit: 20
+    }))
   }
 }

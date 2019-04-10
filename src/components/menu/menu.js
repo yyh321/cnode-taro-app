@@ -36,7 +36,10 @@ class Menu extends Component {
   clickCata(index) {
     let {cataData} = this.props
     let clickCata = cataData[index] // 获取点击的数据
-    this.props.onChangeCata && this.props.onChangeCata(clickCata)
+    if(clickCata.key !== this.props.currentCata.key) {
+      this.props.onChangeCata && this.props.onChangeCata(clickCata)
+    }
+
   }
 
   //关闭抽屉

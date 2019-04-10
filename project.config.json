@@ -2,7 +2,7 @@
   "miniprogramRoot": "./dist",
   "projectname": "cnode",
   "description": "cnode web net",
-  "appid": "touristappid",
+  "appid": "wx9c8bf21f105ee890",
   "setting": {
     "urlCheck": true,
     "es6": false,
