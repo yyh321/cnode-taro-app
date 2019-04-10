@@ -11,7 +11,12 @@ export default function topicList(prestate = TOPIC_STATE, action) {
         ...prestate,
         list: action.list
       }
-
+    case 'appendTopicList':
+      return {
+        ...prestate,
+        list: prestate.list.concat(action.list),
+        page: action.page
+      }
     default:
       return {
         ...prestate
