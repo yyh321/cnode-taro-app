@@ -35,3 +35,19 @@ export function getNextList(params) {
     }
   }
 }
+
+export function getTopicInfo(params) {
+  console.log(11111)
+  return async (dispatch) => {
+    let result = await getJSON(api.getTopicInfo + params.id, params)
+    console.log('result: ', result)
+    if (result && result.data && result.data.success) {
+      dispatch({
+        type: 'getTopicInfo',
+        infoData: result.data.data
+      })
+    } else {
+      console.log('请求话题详情失败！');
+    }
+  }
+}
